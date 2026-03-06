@@ -1,6 +1,6 @@
 import { useRef, useMemo } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { MathUtils, Vector3 } from 'three'
+import { MathUtils, Vector3, Object3D } from 'three'
 
 function Particles({ count = 2000, color = '#a855f7' }) {
   const mesh = useRef()
@@ -62,8 +62,6 @@ function Particles({ count = 2000, color = '#a855f7' }) {
     </>
   )
 }
-
-import { Object3D } from 'three'
 
 export default function WebGLBackground({ darkMode }) {
   if (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) {
